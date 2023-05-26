@@ -35,7 +35,12 @@ export default {
       'user_id'
     ]),
     dateOfBirth(){
-      return this.user_profile.dateOfBirth.substring(0, 10)
+      if(typeof this.user_profile.dateOfBirth !== "undefined")
+      {
+        return this.user_profile.dateOfBirth.substring(0, 10)
+      } 
+      return "";
+      
     }
   },
   methods:{
